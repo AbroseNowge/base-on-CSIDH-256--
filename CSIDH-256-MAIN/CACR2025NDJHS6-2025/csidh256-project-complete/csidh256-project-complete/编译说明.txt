@@ -1,0 +1,75 @@
+========================================
+交互式密钥交换程序编译说明
+========================================
+
+⚠️ 重要：必须在 MSYS2 MINGW64 终端中编译，不能在 PowerShell 或 CMD 中编译！
+
+========================================
+步骤1：打开 MSYS2 MINGW64 终端
+========================================
+
+方法1：从开始菜单找到 "MSYS2 MINGW64"
+方法2：在文件管理器中找到 MSYS2 安装目录，运行 mingw64.exe
+
+========================================
+步骤2：切换到项目目录
+========================================
+
+在 MSYS2 MINGW64 终端中输入：
+
+cd /c/Users/20513/Desktop/CACR2025NDJHS6-2025end1/CACR2025NDJHS6-2025/csidh256-project-complete/csidh256-project-complete
+
+========================================
+步骤3：编译程序
+========================================
+
+复制并粘贴以下命令（整段一起复制）：
+
+gcc -O3 -Wall -Isrc -o interactive_key_exchange.exe \
+    interactive_key_exchange.c \
+    src/fp256.c \
+    src/edwards256.c \
+    src/edwards256_action.c \
+    src/mont_field.c \
+    src/traditional_mul.c \
+    src/param_validator.c \
+    src/rng.c \
+    -lm
+
+或者使用编译脚本：
+
+chmod +x compile_interactive.sh
+./compile_interactive.sh
+
+========================================
+步骤4：验证编译成功
+========================================
+
+如果编译成功，应该看到：
+- 没有错误信息
+- 目录中出现 interactive_key_exchange.exe 文件
+
+验证命令：
+ls -la interactive_key_exchange.exe
+
+========================================
+步骤5：运行程序
+========================================
+
+./interactive_key_exchange.exe
+
+========================================
+常见问题
+========================================
+
+Q: 提示 "gcc: command not found"
+A: 确保在 MSYS2 MINGW64 终端中，不是 PowerShell 或 CMD
+
+Q: 提示 "No such file or directory"
+A: 检查是否在正确的目录中（应该能看到 interactive_key_exchange.c 文件）
+
+Q: 编译错误
+A: 检查所有源文件是否存在，确保使用 -Isrc 参数
+
+========================================
+
