@@ -2,12 +2,12 @@
 
 ## 📋 项目简介
 
-本项目实现了CSIDH-256算法的优化设计，主要对比传统模乘算法和优化Montgomery算法的性能差异。通过Montgomery算法的优化实现，成功实现了50%以上的性能提升。项目提供了完整的交互式演示、性能测试工具，并支持外部测试数据和交互式自定义数据输入。
+本项目实现了CSIDH-256算法的优化设计，主要对比传统模乘算法和优化Montgomery算法的性能差异。通过Montgomery算法的优化实现，成功实现了大约50%以上的性能提升。项目提供了完整的交互式演示、性能测试工具，并支持外部测试数据和交互式自定义数据输入。
 
 ## 🎯 项目特点
 
 - **算法优化**: 基于Montgomery算法的优化实现
-- **性能提升**: 相比传统算法提升50%以上（基于实际测试结果动态计算）
+- **性能提升**: 相比传统算法提升约50%以上（基于实际测试结果动态计算）
 - **安全性保证**: 完全保持原有的安全特性
 - **易于使用**: 提供交互式演示和自动化测试
 - **外部数据支持**: 支持使用外部JSON测试数据文件，提高测试灵活性
@@ -55,7 +55,7 @@ csidh256-project-complete/
 1. **打开MSYS2 MINGW64终端**
 2. **切换到项目目录**:
    ```bash
-   cd /c/Users/20513/Desktop/CACR2025NDJHS6-2025/csidh256-project-complete/csidh256-project-complete
+   cd /c/Users/11111/Desktop/CACR2025NDJHS6-2025/csidh256-project-complete/csidh256-project-complete
    ```
 3. **直接运行演示程序**:
    ```bash
@@ -78,7 +78,7 @@ csidh256-project-complete/
 6.运行方式2：
 点入F盘
 点入MSY,点入mingw64.exe,
-运行 cd "C:\Users\20513\Desktop\CACR2025NDJHS6-2025\csidh256-project-complete\csidh256-project-complete"
+运行 cd "C:\Users\11111（yournum)\Desktop\CACR2025NDJHS6-2025\csidh256-project-complete\csidh256-project-complete"
 进入后，输入./demo_windows.exe进行运行(有下划线，被挡住无法显示）
 如果要单独展示传统数据交互页面，输入./performance_comparison_test.exe(有下划线）
 如果要单独展示外部数据交互页面，输入 ./performance_test_with_external.exe --external test_data_external.json(有下划线）
@@ -107,7 +107,7 @@ gcc -O3 -Wall -Isrc -o performance_test_with_external.exe \
 1. 打开MSYS2 MINGW64终端
 2. 切换到项目目录:
    ```bash
-   cd /c/Users/20513/Desktop/CACR2025NDJHS6-2025/csidh256-project-complete/csidh256-project-complete
+   cd /c/Users/11111/Desktop/CACR2025NDJHS6-2025/csidh256-project-complete/csidh256-project-complete
    ```
 3. 运行交互式演示:
    ```bash
